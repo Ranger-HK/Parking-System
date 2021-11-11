@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextInParking" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InParkingController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="110.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1040.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#722680b7" />
+                  <Stop color="#2a57a1de" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="340.0" layoutY="29.0" prefHeight="53.0" prefWidth="360.0" text="Parking System" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook Bold" size="42.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbParking" focusColor="BLACK" labelFloat="true" layoutX="32.0" layoutY="139.0" onAction="#cmbAction" prefHeight="40.0" prefWidth="220.0" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXComboBox>
+      <JFXButton buttonType="RAISED" layoutX="641.0" layoutY="139.0" onAction="#addDriverAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #079992; -fx-background-radius: 12;" text="Add Driver" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="contextLogOut" buttonType="RAISED" layoutX="878.0" layoutY="139.0" onAction="#logOutAction" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #eb2f06; -fx-background-radius: 12;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="395.0" layoutY="139.0" onAction="#addVehicleAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #079992; -fx-background-radius: 12;" text="Add Vehicle" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <AnchorPane layoutX="32.0" layoutY="205.0" prefHeight="396.0" prefWidth="976.0">
+         <children>
+            <TableView fx:id="contextInPark" prefHeight="396.0" prefWidth="976.0">
+              <columns>
+                <TableColumn fx:id="vehicleNumber" prefWidth="235.0" text="Vehicle Number" />
+                  <TableColumn fx:id="vehicleTypes" prefWidth="242.0" text="Vehicle Type" />
+                  <TableColumn fx:id="vehicleParkingSlot" prefWidth="242.0" text="Parking Slot" />
+                  <TableColumn fx:id="vehicleParkedTime" prefWidth="256.0" text="Parked Time" />
+              </columns>
+            </TableView>
+            <TableView fx:id="contextOnDelivery" prefHeight="396.0" prefWidth="976.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="deliveryVehicleNumber" prefWidth="235.0" text="Vehicle Number" />
+                  <TableColumn fx:id="deliveryVehicleType" prefWidth="242.0" text="Vehicle Type" />
+                  <TableColumn fx:id="deliveryDriverName" prefWidth="242.0" text="Driver Name" />
+                  <TableColumn fx:id="deliveryLeftTime" prefWidth="256.0" text="Left Time" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

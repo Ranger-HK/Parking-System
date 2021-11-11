@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="396.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableController">
+   <children>
+      <TableView prefHeight="396.0" prefWidth="976.0">
+        <columns>
+          <TableColumn prefWidth="235.0" text="Vehicle Number" />
+          <TableColumn prefWidth="242.0" text="Vehicle Type" />
+            <TableColumn prefWidth="242.0" text="Driver Name" />
+            <TableColumn prefWidth="256.0" text="LeftTime" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

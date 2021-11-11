@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextAddDriver" prefHeight="480.0" prefWidth="785.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="785.0">
+         <fill>
+            <LinearGradient endX="0.9333333333333333" endY="1.0" startX="0.18571428571428572" startY="0.09047619047619046">
+               <stops>
+                  <Stop color="#4bab9a" />
+                  <Stop color="#94400c57" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label layoutX="15.0" prefHeight="53.0" prefWidth="219.0" text="Add Driver">
+         <font>
+            <Font name="Century Schoolbook Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="#111111" labelFloat="true" layoutX="217.0" layoutY="94.0" onAction="#moveToNic" prefHeight="32.0" prefWidth="465.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="88.0" layoutY="94.0" prefHeight="32.0" prefWidth="110.0" text="Driver Name">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="driverId" buttonType="RAISED" layoutX="610.0" layoutY="428.0" onAction="#addDriver" prefHeight="32.0" prefWidth="144.0" style="-fx-background-color: #38ada9; -fx-background-radius: 12;" text="Add Driver" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="151.0" layoutY="159.0" prefHeight="32.0" prefWidth="42.0" text="NIC">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNic" focusColor="#111111" labelFloat="true" layoutX="217.0" layoutY="159.0" onAction="#moveToLicenseNo" prefHeight="32.0" prefWidth="465.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#111111" labelFloat="true" layoutX="217.0" layoutY="290.0" onAction="#moveToContactNo" prefHeight="32.0" prefWidth="465.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLicenseNo" focusColor="#111111" labelFloat="true" layoutX="217.0" layoutY="224.0" onAction="#moveToAddress" prefHeight="32.0" prefWidth="465.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNo" focusColor="#111111" labelFloat="true" layoutX="217.0" layoutY="368.0" prefHeight="32.0" prefWidth="465.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="32.0" layoutY="224.0" prefHeight="32.0" prefWidth="161.0" text="Driving License No">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="290.0" prefHeight="32.0" prefWidth="69.0" text="Address">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="368.0" prefHeight="32.0" prefWidth="95.0" text="Contact No">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

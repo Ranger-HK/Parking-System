@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextAddVehicle" prefHeight="480.0" prefWidth="785.0" style="-fx-background-color: #f8f6ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="785.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.780952380952381" startX="0.23333333333333334" startY="0.7476190476190476">
+               <stops>
+                  <Stop color="#4bab99" />
+                  <Stop color="#8f3c0d63" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label layoutX="14.0" prefHeight="53.0" prefWidth="219.0" text="Add Vehicle">
+         <font>
+            <Font name="Century Schoolbook Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddVehicle" focusColor="#111111" labelFloat="true" layoutX="189.0" layoutY="113.0" onAction="#moveToWeight" prefHeight="32.0" prefWidth="176.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="25.0" layoutY="126.0" prefHeight="32.0" prefWidth="144.0" text="Vehicle Number">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtWeight" focusColor="#111111" labelFloat="true" layoutX="189.0" layoutY="222.0" onAction="#moveToPassengers" prefHeight="32.0" prefWidth="176.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="25.0" layoutY="238.0" prefHeight="32.0" prefWidth="159.0" text="Maximum Weight">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPassengers" focusColor="#111111" labelFloat="true" layoutX="189.0" layoutY="320.0" prefHeight="32.0" prefWidth="176.0" unFocusColor="BLACK">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="18.0" layoutY="336.0" prefHeight="32.0" prefWidth="159.0" text="No Of  Passengers">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="126.0" prefHeight="32.0" prefWidth="110.0" text="Vehicle Type">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicleType" layoutX="566.0" layoutY="133.0" onAction="#openVehicleType" prefHeight="25.0" prefWidth="176.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXComboBox>
+      <JFXButton fx:id="txtAddVehicleContext" buttonType="RAISED" layoutX="598.0" layoutY="405.0" onAction="#openAddVehicle" prefHeight="32.0" prefWidth="144.0" style="-fx-background-color: #38ada9; -fx-background-radius: 12;" text="Add Vehicle" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

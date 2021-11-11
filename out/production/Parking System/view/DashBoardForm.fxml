@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextDashBoardForm" prefHeight="615.0" prefWidth="1040.0" style="-fx-background-color: #fffce4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" height="145.0" layoutX="136.0" layoutY="439.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="321.0">
+         <fill>
+            <LinearGradient endX="1.0" startX="0.023809523809523808">
+               <stops>
+                  <Stop color="#1c92d2" />
+                  <Stop color="#1c92d2" offset="0.007662835249042145" />
+                  <Stop color="#72d3be" offset="0.9961685823754789" />
+                  <Stop color="#1d92d1ee" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label alignment="TOP_CENTER" layoutX="162.0" layoutY="456.0" prefHeight="46.0" prefWidth="275.0" text="Your Parking Slot Number" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="110.0" layoutX="662.0" layoutY="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="341.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.3142857142857143">
+               <stops>
+                  <Stop color="#1c92d2" />
+                  <Stop color="#1d92d1dd" offset="0.007662835249042145" />
+                  <Stop color="#7db579d4" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="764.0" layoutY="170.0" prefHeight="46.0" prefWidth="137.0" text="2021 /05/06" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="110.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1040.0">
+         <fill>
+            <LinearGradient endX="0.8428571428571427" endY="1.0" startX="0.07619047619047606" startY="0.8380952380952382">
+               <stops>
+                  <Stop color="#742680b8" />
+                  <Stop color="#2957a1de" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXComboBox fx:id="cmbVehicle" focusColor="BLACK" labelFloat="true" layoutX="175.0" layoutY="162.0" onAction="#openCmb" prefHeight="38.0" prefWidth="249.0" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbDriver" focusColor="BLACK" labelFloat="true" layoutX="167.0" layoutY="360.0" prefHeight="38.0" prefWidth="249.0" unFocusColor="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXComboBox>
+      <JFXTextField fx:id="lblType" focusColor="BLACK" labelFloat="true" layoutX="167.0" layoutY="272.0" prefHeight="25.0" prefWidth="249.0">
+         <effect>
+            <InnerShadow />
+         </effect></JFXTextField>
+      <JFXButton fx:id="btnParkVehicleContext" buttonType="RAISED" layoutX="662.0" layoutY="299.0" onAction="#parkVehicleAction" prefHeight="46.0" prefWidth="341.0" style="-fx-background-color: #128d9b; -fx-background-radius: 12;" text=" Park Vehicle" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnOnDeliveryContext" buttonType="RAISED" layoutX="662.0" layoutY="380.0" onAction="#onDeliveryShiftAction" prefHeight="46.0" prefWidth="341.0" style="-fx-background-color: #128d9b; -fx-background-radius: 12;" text="On Delivery Shift" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="662.0" layoutY="512.0" onAction="#managementLoginAction" prefHeight="61.0" prefWidth="349.0" style="-fx-background-color: #128d9b; -fx-background-radius: 12;" text="Management Log in" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="336.0" layoutY="29.0" prefHeight="53.0" prefWidth="369.0" text="Parking System" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNumber" alignment="CENTER" layoutX="169.0" layoutY="502.0" prefHeight="53.0" prefWidth="261.0" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="764.0" layoutY="219.0" prefHeight="46.0" prefWidth="137.0" text="10 : 00 PM" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="181.0" prefHeight="20.0" prefWidth="110.0" text="Select Vehicle">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="287.0" prefHeight="20.0" prefWidth="103.0" text="Vehicle Type">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="380.0" prefHeight="20.0" prefWidth="52.0" text="Driver">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
